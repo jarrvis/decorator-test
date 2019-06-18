@@ -6,16 +6,11 @@
 
 
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
-import {
-  MatchResults,
-} from '@stencil/router';
 
 
 export namespace Components {
   interface AppHome {}
-  interface AppProfile {
-    'match': MatchResults;
-  }
+  interface AppProfile {}
   interface AppRoot {}
   interface CustomTest {}
 }
@@ -56,9 +51,7 @@ declare global {
 
 declare namespace LocalJSX {
   interface AppHome extends JSXBase.HTMLAttributes<HTMLAppHomeElement> {}
-  interface AppProfile extends JSXBase.HTMLAttributes<HTMLAppProfileElement> {
-    'match'?: MatchResults;
-  }
+  interface AppProfile extends JSXBase.HTMLAttributes<HTMLAppProfileElement> {}
   interface AppRoot extends JSXBase.HTMLAttributes<HTMLAppRootElement> {}
   interface CustomTest extends JSXBase.HTMLAttributes<HTMLCustomTestElement> {}
 
